@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Success</title>
+    <script type = "text/html" src ="src/registration.html"></script>
+    <script>
+        function onLoad()
+        {
+            var user = sessionStorage.getItem("userid");
+
+            var email = sessionStorage.getItem("email_address");
+            var SQ1 = sessionStorage.getItem("sec_question1");
+            var ANS1 = sessionStorage.getItem("answer1");
+            var SQ2 = sessionStorage.getItem("sec_question2");
+            var ANS2 = sessionStorage.getItem("answer2");
+            var mob = sessionStorage.getItem("mobile_no");
+            var add = sessionStorage.getItem("address");
+            var areas = sessionStorage.getItem("areas_of_interest");
+
+            document.getElementById("uid").innerHTML = user;
+            document.getElementById("email").innerHTML = email;
+            document.getElementById("sq1").innerHTML = SQ1;
+            document.getElementById("ans1").innerHTML = ANS1
+            document.getElementById("sq2").innerHTML = SQ2;
+            document.getElementById("ans2").innerHTML = ANS2
+            document.getElementById("mobil").innerHTML = mob;
+            document.getElementById("addr").innerHTML = add;
+            document.getElementById("areasI").innerHTML = areas;
+
+        }
+    </script>
+</head>
+<body onload="onLoad();">
+<table align = "center">
+    <th> Registration Successful!</th>
+    <tr>
+        <td>
+ User id : <label id="uid"></label> <br><br>
+E-mail : <label id = "email"></label><br><br>
+Security Question 1 : <label id = "sq1"></label><br><br>
+ Answer 1 : <label id="ans1"></label>   <br><br>
+ Security Question 2 : <label id = "sq2"></label><br><br>
+            Answer 2 : <label id="ans2"></label>   <br><br>
+            Mobile Number : <label id = "mobil"></label><br><br>
+Address : <label id = "addr"></label><br><br>
+Areas Interested in : <label id= "areasI"></label>
+        </td>
+    </tr>
+</table>
+
+
+
+
+
+</body>
+</html>
